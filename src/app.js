@@ -12,6 +12,10 @@ let when = ['before the class', 'when I was sleeping', 'while I was exercising',
 
 window.onload = function (onload) {
   //write your code here
+  document.getElementById("myBtn").addEventListener("click", generateExcuse);
+
+};
+const generateExcuse = () => {
   let whoIndex = Math.floor(Math.random() * who.length)
   let actionIndex = Math.floor(Math.random() * action.length)
   let whatIndex = Math.floor(Math.random() * what.length)
@@ -20,5 +24,4 @@ window.onload = function (onload) {
   let excuse = who[whoIndex] + " " + action[actionIndex] + " " + what[whatIndex] + " " + when[whenIndex]
   document.querySelector("#excuse").innerHTML = excuse
 
-
-};
+}
